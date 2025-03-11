@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - Virtue</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/admin.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Panel de Administración</h1>
+  </header>
+
+  <nav class="admin-nav">
+    <button onclick="showSection('reviews')">Reviews</button>
+    <button onclick="showSection('blogs')">Blogs</button>
+    <button onclick="showSection('playlists')">Playlists</button>
+  </nav>
+
+  <main>
+    <!-- Sección para Reviews -->
+    <section id="reviews" class="admin-section">
+      <h2>Gestionar Reviews</h2>
+      <form id="reviewForm" class="admin-form">
+        <input type="text" id="reviewTitle" placeholder="Título" required>
+        <textarea id="reviewContent" placeholder="Contenido" required></textarea>
+        <input type="text" id="reviewImage" placeholder="URL de imagen" oninput="updatePreview('review')">
+        <button type="submit">Agregar Review</button>
+      </form>
+      <h3>Vista Previa</h3>
+      <div id="reviewPreview" class="preview-card"></div>
+      <h3>Lista de Reviews</h3>
+      <div id="reviewList" class="admin-list"></div>
+    </section>
+
+    <!-- Sección para Blogs -->
+    <section id="blogs" class="admin-section" style="display:none;">
+      <h2>Gestionar Blogs</h2>
+      <form id="blogForm" class="admin-form">
+        <input type="text" id="blogTitle" placeholder="Título" required>
+        <textarea id="blogContent" placeholder="Contenido" required></textarea>
+        <input type="text" id="blogAuthor" placeholder="Autor">
+        <input type="text" id="blogImage" placeholder="URL de imagen" oninput="updatePreview('blog')">
+        <button type="submit">Agregar Blog</button>
+      </form>
+      <h3>Vista Previa</h3>
+      <div id="blogPreview" class="preview-card"></div>
+      <h3>Lista de Blogs</h3>
+      <div id="blogList" class="admin-list"></div>
+    </section>
+
+    <!-- Sección para Playlists -->
+    <section id="playlists" class="admin-section" style="display:none;">
+      <h2>Gestionar Playlists</h2>
+      <form id="playlistForm" class="admin-form">
+        <input type="text" id="playlistName" placeholder="Nombre" required>
+        <textarea id="playlistDescription" placeholder="Descripción" required></textarea>
+        <input type="text" id="playlistImage" placeholder="URL de imagen" oninput="updatePreview('playlist')">
+        <input type="text" id="playlistSongs" placeholder="Canciones (separadas por comas)">
+        <button type="submit">Agregar Playlist</button>
+      </form>
+      <h3>Vista Previa</h3>
+      <div id="playlistPreview" class="preview-card"></div>
+      <h3>Lista de Playlists</h3>
+      <div id="playlistList" class="admin-list"></div>
+    </section>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,875 @@
+/* 🔹 Importar Arial Narrow y alternativa similar */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&family=Archivo+Narrow:wght@400;500;600;700&display=swap');
+
+/* 🔹 Reset y Configuración General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial Narrow", "Oswald", "Archivo Narrow", sans-serif;
+  font-stretch: condensed;
+  letter-spacing: 0.5px; /* Ajuste para que se vea más alargado */
+}
+
+body {
+  width: 100%;
+  background-color: white;
+  color: black;
+}
+
+/* 🔹 Header */
+.header {
+  padding: 10px 20px;
+  border-bottom: 0.5px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* 🔹 Contenedor Principal (Reviews + Blogs) */
+.container {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  border-bottom: 0.5px solid black;
+  align-items: stretch;
+}
+
+/* 🔹 Sección de Reviews */
+.reviews-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  border-right: 0.5px solid black;
+}
+
+.review {
+  border-bottom: 0.5px solid black;
+  padding: 20px;
+  width: 100%;
+}
+
+.review:last-child {
+  border-bottom: none;
+}
+
+.review-content {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.review-image {
+  width: 240px;
+  height: 200px;
+  border: 0.5px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: lightgray;
+}
+
+.review-text {
+  flex: 1;
+}
+
+.review-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.review-body {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.read-more {
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* 🔹 Botón para ver todas las reviews */
+.all-reviews {
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+  border-top: 0.5px solid black;
+}
+
+.all-reviews:hover {
+  text-decoration: underline;
+}
+
+/* 🔹 Sección de Blogs */
+.blogs-section {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.blog-section-title {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.blog-content {
+  flex-grow: 1;
+  position: relative;
+  padding: 20px;
+  border: 0.5px solid black;
+  text-align: center;
+}
+
+.blog-image {
+  width: 100%;
+  height: 200px;
+  border: 0.5px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: lightgray;
+  margin-bottom: 20px;
+}
+
+/* 🔹 Flechas de Navegación */
+.blog-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.blog-nav-btn {
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-weight: bold;
+}
+
+.blog-nav-btn:hover {
+  color: gray;
+}
+
+/* 🔹 Texto del Blog */
+.blog-text {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.all-blogs {
+  margin-top: auto;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+  border-top: 0.5px solid black;
+}
+
+.all-blogs:hover {
+  text-decoration: underline;
+}
+
+/* 🔹 Sección de Playlists */
+.playlists-section {
+  padding: 20px;
+  border-bottom: 0.5px solid black;
+}
+
+.playlists-title {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.playlists-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.playlist-item {
+  text-align: center;
+}
+
+.playlist-item a {
+  text-decoration: none;
+  color: black;
+}
+
+.playlist-item a:hover {
+  text-decoration: underline;
+}
+
+.playlist-image {
+  width: 100%;
+  height: 120px;
+  border: 0.5px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: lightgray;
+  margin-bottom: 10px;
+}
+
+.playlist-name {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* 🔹 Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  border-top: 0.5px solid black;
+  font-weight: bold;
+}
+
+/* 🔹 Estilo para las páginas de listado */
+.content {
+  padding: 20px;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.blogs-list, .reviews-list, .playlists-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.blog-item, .review-item, .playlist-item {
+  border: 0.5px solid black;
+  padding: 10px;
+  background: lightgray;
+}
+
+.blog-image, .review-image, .playlist-image {
+  height: 150px;
+  border: 0.5px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blog-item a, .review-item a, .playlist-item a {
+  text-decoration: none;
+  color: black;
+}
+
+.blog-item h2, .review-item h2, .playlist-item h2 {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* 🔹 Estilo para las páginas de listado */
+.content {
+  padding: 20px;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.blogs-list, .reviews-list, .playlists-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.blog-item, .review-item, .playlist-item {
+  border: 0.5px solid black;
+  padding: 10px;
+  background: lightgray;
+}
+
+.blog-image, .review-image, .playlist-image {
+  height: 150px;
+  border: 0.5px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blog-item a, .review-item a, .playlist-item a {
+  text-decoration: none;
+  color: black;
+}
+
+.blog-item h2, .review-item h2, .playlist-item h2 {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* 🔹 Estilo para la Vista Individual de Review */
+.review-content {
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.review-title {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.review-meta {
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 20px;
+}
+
+.review-image-large {
+  width: 100%;
+  height: 300px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: lightgray;
+  margin-bottom: 20px;
+}
+
+.review-body {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+/* 🔹 Botón para volver */
+.back-button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.back-button {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 1px solid black;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+.back-button:hover {
+  background: black;
+  color: white;
+}
+/* 🔹 Estilo para la Vista Individual de Playlist */
+.playlist-content {
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.playlist-title {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.playlist-meta {
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 20px;
+}
+
+.playlist-image-large {
+  width: 100%;
+  height: 300px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: lightgray;
+  margin-bottom: 20px;
+}
+
+.playlist-description {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+/* 🔹 Lista de Canciones */
+.songs-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.songs-list {
+  list-style-type: none;
+  padding: 0;
+  font-size: 16px;
+  text-align: left;
+}
+
+.songs-list li {
+  padding: 10px;
+  border-bottom: 1px solid black;
+}
+
+.songs-list li:last-child {
+  border-bottom: none;
+}
+
+/* 🔹 Botón para volver */
+.back-button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.back-button {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 1px solid black;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+.back-button:hover {
+  background: black;
+  color: white;
+}
+
+/* 🔹 Estilo para la Vista Individual del Blog */
+.blog-content {
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.blog-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.blog-meta {
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 20px;
+}
+
+.blog-image-large {
+  width: 100%;
+  height: 300px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: lightgray;
+  margin-bottom: 20px;
+}
+
+.blog-body {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+/* 🔹 Bloques de Texto */
+.blog-body h2 {
+  font-size: 22px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.blog-body p {
+  margin-bottom: 15px;
+}
+
+.blog-quote {
+  font-style: italic;
+  font-size: 18px;
+  padding: 10px;
+  border-left: 3px solid black;
+  margin: 20px 0;
+  color: #555;
+}
+
+/* 🔹 Sección de Blogs Relacionados */
+.related-blogs {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.related-blogs h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.related-blogs-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.related-blog-item {
+  width: 150px;
+  text-align: center;
+}
+
+.related-blog-item a {
+  text-decoration: none;
+  color: black;
+}
+
+.related-blog-item p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.related-blog-image {
+  width: 100%;
+  height: 100px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: lightgray;
+}
+
+/* 🔹 Botón para volver */
+.back-button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.back-button {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 1px solid black;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+.back-button:hover {
+  background: black;
+  color: white;
+}
+
+/* 🔹 Estilo para la Vista de About Us */
+.about-content {
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.about-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.about-image {
+  width: 100%;
+  height: 300px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: lightgray;
+  margin-bottom: 20px;
+}
+
+.about-description {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+/* 🔹 Cita destacada */
+.about-quote {
+  font-style: italic;
+  font-size: 18px;
+  padding: 10px;
+  border-left: 3px solid black;
+  margin: 20px 0;
+  color: #555;
+}
+
+/* 🔹 Sección del equipo */
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.team-member {
+  text-align: center;
+  width: 150px;
+}
+
+.team-image {
+  width: 100%;
+  height: 120px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: lightgray;
+  margin-bottom: 10px;
+}
+
+.team-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.team-role {
+  font-size: 14px;
+  color: gray;
+}
+
+/* 🔹 Botón para volver */
+.back-button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.back-button {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 1px solid black;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+.back-button:hover {
+  background: black;
+  color: white;
+}
+/* 🔹 General */
+body {
+  font-family: "Arial Narrow", "Oswald", "Archivo Narrow", sans-serif;
+  font-stretch: condensed;
+  letter-spacing: 0.5px;
+  background-color: white;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+/* 🔹 Header */
+.header {
+  padding: 15px 20px;
+  border-bottom: 2px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* 🔹 Navegación en Admin */
+.admin-nav {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.admin-nav button {
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.admin-nav button:hover {
+  background: gray;
+}
+
+/* 🔹 Contenedor Principal */
+.admin-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* 🔹 Secciones del Panel */
+.admin-section {
+  border: 2px solid black;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: white;
+}
+
+.admin-section h2 {
+  margin-bottom: 10px;
+}
+
+/* 🔹 Formularios */
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.admin-form input, .admin-form textarea {
+  padding: 10px;
+  border: 1px solid black;
+  font-size: 14px;
+}
+
+.admin-form button {
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.admin-form button:hover {
+  background: gray;
+}
+
+/* 🔹 Lista de Contenidos */
+.admin-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.admin-item {
+  padding: 10px;
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-item button {
+  background: none;
+  border: 1px solid black;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.admin-item button:hover {
+  background: black;
+  color: white;
+}
+
+/* 🔹 Vista Previa */
+.preview-card {
+  border: 2px solid black;
+  padding: 10px;
+  text-align: center;
+  background: lightgray;
+  font-size: 14px;
+  min-height: 50px;
+}
+
+/* 🔹 Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 2px solid black;
+  font-weight: bold;
+}
